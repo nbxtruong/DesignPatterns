@@ -13,5 +13,4 @@ public class Infantrymen extends AbstractSoldier {
 		// TODO Auto-generated method stub
 		return FORCE_INFANTRYMEN;
 	}
-
 }
