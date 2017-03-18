@@ -13,5 +13,4 @@ public class ConcreteObserver implements Observer {
 		// TODO Auto-generated method stub
 		System.out.println(subject.d);
 	}
-
 }

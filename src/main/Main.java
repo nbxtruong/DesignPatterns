@@ -100,26 +100,25 @@ public class Main {
 
 		// observer
 		System.out.println("... Demo Observer Pattern ...");
-	    ConcreteSubject subject = new ConcreteSubject();
-	    Observer ob1 = new ConcreteObserver(subject);
-	    Observer ob2 = new ConcreteObserver(subject);
-	    System.out.println("Doing something in the subject over time ...");
-	    System.out.println("           Observable  Observer1      Observer2");
-	    System.out.println("Iteration  change?     notified?      notified?");
-	    for (int i = 0; i < 10; i++) {
-	        System.out.print(i + ":         ");
-	        subject.operation();
-	        System.out.println();
-	    }
-	    System.out.println("Removing observer1 from the subject ... Repeating ...");
-	    System.out.println("           Observable  Observer2");
-	    System.out.println("Iteration  change?     notified?");
-	    subject.deleteObserver(ob1);
-	    for (int i = 0; i < 10; i++) {
-	        System.out.print(i + ":         ");
-	        subject.operation();
-	        System.out.println();
-	    }
+		ConcreteSubject subject = new ConcreteSubject();
+		Observer ob1 = new ConcreteObserver(subject);
+		Observer ob2 = new ConcreteObserver(subject);
+		System.out.println("Doing something in the subject over time ...");
+		System.out.println("Observable Observer1 Observer2");
+		System.out.println("Iteration change? notified?");
+		for (int i = 0; i < 10; i++) {
+			System.out.print(i + ": ");
+			subject.operation();
+			System.out.println();
+		}
+		System.out.println("Removing observer1 from the subject ... Repeating ...");
+		System.out.println("Observable Observer2");
+		System.out.println("Iteration change? notified?");
+		subject.deleteObserver(ob1);
+		for (int i = 0; i < 10; i++) {
+			System.out.print(i + ": ");
+			subject.operation();
+			System.out.println();
+		}
 	}
-
 }
